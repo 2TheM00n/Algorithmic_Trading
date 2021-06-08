@@ -110,6 +110,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Shell scripts
+.sh
+
 # Spyder project settings
 .spyderproject
 .spyproject
