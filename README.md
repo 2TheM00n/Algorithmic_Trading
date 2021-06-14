@@ -18,7 +18,7 @@ High frequency trading algorithm executed with Alpaca API and back tested with B
 * [JupyterNotebook](https://jupyter.org/)
 * [Alpaca API](https://alpaca.markets/docs/api-documentation/api-v2/)
 * [Backtrader](https://www.backtrader.com/docu/)
-<!-- * [AlphaVantage API](https://www.alphavantage.co/documentation/#) -->
+* [AlphaVantage API](https://www.alphavantage.co/documentation/#)
 
 ## Securities Tested:
-* Professional Diversity Network, Inc (IPDN)
+* Tesla (TSLA)
