@@ -89,25 +89,8 @@ class MAcrossover(bt.Strategy):
 				self.log(f'CLOSE CREATE {self.dataclose[0]:2f}')
 				self.order = self.close()
 
-class Screener_SMA(bt.Analyzer):
-	params = (('period',20), ('devfactor',2),)
 
-	def start(self):
-		self.bbands = {data: bt.indicators.BollingerBands(data, period=self.params.period, devfactor=self.params.devfactor)
-					 for data in self.datas}
-
-	def stop(self):
-		self.rets['over'] = list()
-		self.rets['under'] = list()
-
-		for data, band in self.bbands.items():
-			node = data._name, data.close[0], round(band.lines.bot[0], 2)
-			if data > band.lines.bot:
-				self.rets['over'].append(node)
-			else:
-				self.rets['under'].append(node)
-
-#create strategy held object
+#Create golden cross strategy:
 class GoldCross(bt.Strategy):
 
     # set parameters to define fast and slow
@@ -118,7 +101,6 @@ class GoldCross(bt.Strategy):
         ("ticker", "stock"),
     )
 
-    # define constractors
     def __init__(self):
         print("position size:", self.position.size)
 
@@ -135,7 +117,6 @@ class GoldCross(bt.Strategy):
         )
 
     def log(self, txt, dt=None):
-        """ Logging function fot this strategy"""
         dt = dt or self.data.datetime[0]
         if isinstance(dt, float):
             dt = bt.num2date(dt)
