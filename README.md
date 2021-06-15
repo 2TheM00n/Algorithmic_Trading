@@ -22,3 +22,15 @@ High frequency trading algorithm executed with Alpaca API and back tested with B
 
 ## Securities Tested:
 * Tesla (TSLA)
+* Facebook (FB)
+* Washington Prime Group Inc (WPG)
+* Amazon (AMZN)
+* General Electric (GE)
+
+## Strategies Demonstrated
+* GoldCross (modified)
+* SMA Crossover (modified)
+
+
+
+
